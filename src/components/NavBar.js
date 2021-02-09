@@ -15,16 +15,18 @@ const NavBar = () => {
       <NavbarToggler></NavbarToggler>
       <Nav className="mr-auto" tabs>
         <NavItem>
-          <NavLink href="/">Home</NavLink>
+          <NavLink href="/american-ancestries">Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/places">Places</NavLink>
+          <NavLink href="/american-ancestries/places">Places</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/ancestry_groups">Ancestry Groups</NavLink>
+          <NavLink href="/american-ancestries/ancestry_groups">
+            Ancestry Groups
+          </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/places/new">New Place</NavLink>
+          <NavLink href="/american-ancestries/places/new">New Place</NavLink>
         </NavItem>
       </Nav>
     </Navbar>
