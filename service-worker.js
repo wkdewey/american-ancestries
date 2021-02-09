@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/american-ancestries/precache-manifest.bfe217f636645ac0aa9142fc965df7aa.js"
+  "/american-ancestries/precache-manifest.a5daf48d64edf1f41f719c02a144d6b0.js"
 );
 
 self.addEventListener('message', (event) => {
