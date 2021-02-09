@@ -25,7 +25,7 @@ class App extends Component {
                 return <AncestryGroupsContainer {...routerProps} />;
               }}
             />
-            <Route path="/">
+            <Route path="">
               <Home />
             </Route>
           </Switch>
