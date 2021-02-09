@@ -9,7 +9,7 @@ import Home from "./components/Home";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/american-ancestries">
         <div className="App">
           <NavBar />
           <Switch>
