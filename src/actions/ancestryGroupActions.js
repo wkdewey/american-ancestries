@@ -1,6 +1,6 @@
 export const fetchAncestryGroups = () => {
   return (dispatch) => {
-    fetch("http://localhost:3000/api/v1/ancestry_groups")
+    fetch("https://damp-plateau-70733.herokuapp.com/api/v1/ancestry_groups")
       .then((response) => {
         return response.json();
       })

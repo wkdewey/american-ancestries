@@ -1,6 +1,6 @@
 export const fetchPlaces = () => {
   return (dispatch) => {
-    fetch("http://localhost:3000/api/v1/places")
+    fetch("https://damp-plateau-70733.herokuapp.com/api/v1/places")
       .then((response) => {
         return response.json();
       })
@@ -18,7 +18,7 @@ export const addPlace = (
   }
 ) => {
   return (dispatch) => {
-    fetch("http://localhost:3000/api/v1/places", {
+    fetch("https://damp-plateau-70733.herokuapp.com/api/v1/places", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(place),
