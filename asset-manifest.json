@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/american-ancestries/static/css/main.5f361e03.chunk.css",
-    "main.js": "/american-ancestries/static/js/main.c7a887fc.chunk.js",
-    "main.js.map": "/american-ancestries/static/js/main.c7a887fc.chunk.js.map",
-    "runtime-main.js": "/american-ancestries/static/js/runtime-main.672cb0b4.js",
-    "runtime-main.js.map": "/american-ancestries/static/js/runtime-main.672cb0b4.js.map",
-    "static/css/2.6414bb7b.chunk.css": "/american-ancestries/static/css/2.6414bb7b.chunk.css",
-    "static/js/2.369b1a52.chunk.js": "/american-ancestries/static/js/2.369b1a52.chunk.js",
-    "static/js/2.369b1a52.chunk.js.map": "/american-ancestries/static/js/2.369b1a52.chunk.js.map",
-    "index.html": "/american-ancestries/index.html",
-    "precache-manifest.56358cc4d43751673af7e8cd870188ef.js": "/american-ancestries/precache-manifest.56358cc4d43751673af7e8cd870188ef.js",
-    "service-worker.js": "/american-ancestries/service-worker.js",
-    "static/css/2.6414bb7b.chunk.css.map": "/american-ancestries/static/css/2.6414bb7b.chunk.css.map",
-    "static/css/main.5f361e03.chunk.css.map": "/american-ancestries/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.369b1a52.chunk.js.LICENSE.txt": "/american-ancestries/static/js/2.369b1a52.chunk.js.LICENSE.txt"
+    "main.css": "./static/css/main.5f361e03.chunk.css",
+    "main.js": "./static/js/main.b2c5d7ba.chunk.js",
+    "main.js.map": "./static/js/main.b2c5d7ba.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.2cd3126c.js",
+    "runtime-main.js.map": "./static/js/runtime-main.2cd3126c.js.map",
+    "static/css/2.6414bb7b.chunk.css": "./static/css/2.6414bb7b.chunk.css",
+    "static/js/2.369b1a52.chunk.js": "./static/js/2.369b1a52.chunk.js",
+    "static/js/2.369b1a52.chunk.js.map": "./static/js/2.369b1a52.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.1cb518b0359ae529d34750ab26249fc1.js": "./precache-manifest.1cb518b0359ae529d34750ab26249fc1.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.6414bb7b.chunk.css.map": "./static/css/2.6414bb7b.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "./static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.369b1a52.chunk.js.LICENSE.txt": "./static/js/2.369b1a52.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.672cb0b4.js",
+    "static/js/runtime-main.2cd3126c.js",
     "static/css/2.6414bb7b.chunk.css",
     "static/js/2.369b1a52.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.c7a887fc.chunk.js"
+    "static/js/main.b2c5d7ba.chunk.js"
   ]
 }
