@@ -1,19 +1,24 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addPlace } from "../../actions/placeActions";
 import { fetchAncestryGroups } from "../../actions/ancestryGroupActions";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import Loading from "../Loading";
 
-class PlaceInput extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      population: 0,
-      placeAncestryGroups: null,
-    };
-  }
+function placeInput() {
+  // constructor(props) {
+  //   super(props);
+    // this.state = {
+    //   name: "",
+    //   population: 0,
+    //   placeAncestryGroups: null,
+    // };
+    
+
+  // }
+  const [name, setName] = useState("");
+  const [population, setPopulation] = useState(0);
+  const [placeAncestryGroups, setPlaceAncestryGroups] = useState(null);
 
   handleNameChange = (event) => {
     this.setState({
