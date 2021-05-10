@@ -5,59 +5,32 @@ import { fetchAncestryGroups } from "../../actions/ancestryGroupActions";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import Loading from "../Loading";
 
-function PlaceInput({ placeAncestryGroups = null }) {
-  // constructor(props) {
-  //   super(props);
-  // this.state = {
-  //   name: "",
-  //   population: 0,
-  //   placeAncestryGroups: null,
-  // };
-
-  // }
+const PlaceInput = (props) => {
   const [name, setName] = useState("");
   const [population, setPopulation] = useState(0);
-  const [placeAncestryGroups, setPlaceAncestryGroups] = useState(
-    placeAncestryGroups
-  );
+  const [placeAncestryGroups, setPlaceAncestryGroups] = useState(() => {
+    if (props.initialGroups) {
+      return props.initialGroups;
+    } else {
+      return null;
+    }
+  });
 
-  // handleNameChange = (event) => {
-  //   this.setState({
-  //     name: event.target.value,
-  //   });
-  // };
-  handleNameChange = (event) => setName(event.target.value);
+  const handleNameChange = (event) => setName(event.target.value);
 
-  // handlePopulationChange = (event) => {
-  //   this.setState({
-  //     population: parseInt(event.target.value),
-  //   });
-  // };
-  handlePopulationChange = (event) =>
+  const handlePopulationChange = (event) =>
     setPopulation(parseInt(event.target.value));
 
-  handleGroupChange = (groups, id, event) => {
+  const handleGroupChange = (groups, id, event) => {
+    debugger;
     let group = { ...groups.find((group) => group.ancestryGroupId === id) };
     group.population = parseInt(event.target.value);
     const idx = groups.findIndex((group) => group.ancestryGroupId === id);
     groups[idx] = group;
-    // this.setState({
-    //   placeAncestryGroups: groups,
-    // });
     setPlaceAncestryGroups(groups);
   };
 
-  // handleGroupChange = (groups, id, event) => {
-  //   let group = { ...groups.find((group) => group.ancestryGroupId === id) };
-  //   group.population = parseInt(event.target.value);
-  //   const idx = groups.findIndex((group) => group.ancestryGroupId === id);
-  //   groups[idx] = group;
-  //   this.setState({
-  //     placeAncestryGroups: groups,
-  //   });
-  // };
-
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     let formData = {
       name: name,
@@ -71,17 +44,12 @@ function PlaceInput({ placeAncestryGroups = null }) {
     };
     this.props.addPlace(formData);
     this.props.fetchAncestryGroups();
-    const placeAncestryGroups = placeAncestryGroups.map((group) => {
+    const newAncestryGroups = placeAncestryGroups.map((group) => {
       return { ...group, population: 0 };
     });
-    // this.setState({
-    //   name: "",
-    //   population: 0,
-    //   placeAncestryGroups,
-    // });
     setName("");
     setPopulation(0);
-    setPlaceAncestryGroups(placeAncestryGroups);
+    setPlaceAncestryGroups(newAncestryGroups);
   };
 
   let groups;
@@ -144,7 +112,7 @@ function PlaceInput({ placeAncestryGroups = null }) {
       </Form>
     </div>
   );
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
