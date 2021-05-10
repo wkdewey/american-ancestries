@@ -20,27 +20,40 @@ function placeInput() {
   const [population, setPopulation] = useState(0);
   const [placeAncestryGroups, setPlaceAncestryGroups] = useState(null);
 
-  handleNameChange = (event) => {
-    this.setState({
-      name: event.target.value,
-    });
-  };
+  // handleNameChange = (event) => {
+  //   this.setState({
+  //     name: event.target.value,
+  //   });
+  // };
+  handleNameChange = (event) => setName(event.target.value)
 
-  handlePopulationChange = (event) => {
-    this.setState({
-      population: parseInt(event.target.value),
-    });
-  };
+  // handlePopulationChange = (event) => {
+  //   this.setState({
+  //     population: parseInt(event.target.value),
+  //   });
+  // };
+  handlePopulationChange = (event) => setPopulation(parseInt(event.target.value))
 
   handleGroupChange = (groups, id, event) => {
     let group = { ...groups.find((group) => group.ancestryGroupId === id) };
     group.population = parseInt(event.target.value);
     const idx = groups.findIndex((group) => group.ancestryGroupId === id);
     groups[idx] = group;
-    this.setState({
-      placeAncestryGroups: groups,
-    });
+    // this.setState({
+    //   placeAncestryGroups: groups,
+    // });
+    setPlaceAncestryGroups(groups)
   };
+
+    // handleGroupChange = (groups, id, event) => {
+  //   let group = { ...groups.find((group) => group.ancestryGroupId === id) };
+  //   group.population = parseInt(event.target.value);
+  //   const idx = groups.findIndex((group) => group.ancestryGroupId === id);
+  //   groups[idx] = group;
+  //   this.setState({
+  //     placeAncestryGroups: groups,
+  //   });
+  // };
 
   handleSubmit = (e) => {
     e.preventDefault();
