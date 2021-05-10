@@ -5,7 +5,7 @@ import { fetchAncestryGroups } from "../../actions/ancestryGroupActions";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import Loading from "../Loading";
 
-function PlaceInput() {
+function PlaceInput({ placeAncestryGroups = null }) {
   // constructor(props) {
   //   super(props);
   // this.state = {
@@ -17,7 +17,9 @@ function PlaceInput() {
   // }
   const [name, setName] = useState("");
   const [population, setPopulation] = useState(0);
-  const [placeAncestryGroups, setPlaceAncestryGroups] = useState(null);
+  const [placeAncestryGroups, setPlaceAncestryGroups] = useState(
+    placeAncestryGroups
+  );
 
   // handleNameChange = (event) => {
   //   this.setState({
@@ -85,8 +87,6 @@ function PlaceInput() {
   let groups;
   if (placeAncestryGroups) {
     groups = [...placeAncestryGroups];
-  } else if (this.props.placeAncestryGroups) {
-    groups = [...this.props.placeAncestryGroups];
   } else {
     groups = [];
     return <Loading />;
