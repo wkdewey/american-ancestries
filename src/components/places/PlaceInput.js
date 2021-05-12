@@ -5,12 +5,12 @@ import { fetchAncestryGroups } from "../../actions/ancestryGroupActions";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import Loading from "../Loading";
 
-const PlaceInput = (props) => {
+const PlaceInput = ({ initialGroups = null }) => {
   const [name, setName] = useState("");
   const [population, setPopulation] = useState(0);
   const [placeAncestryGroups, setPlaceAncestryGroups] = useState(() => {
-    if (props.initialGroups) {
-      return props.initialGroups;
+    if (initialGroups) {
+      return initialGroups;
     } else {
       return null;
     }
