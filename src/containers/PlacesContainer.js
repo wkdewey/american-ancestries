@@ -21,7 +21,10 @@ class PlacesContainer extends Component {
       <div>
         <Switch>
           <Route path={`${this.props.match.path}/new`}>
-            <PlaceInput initialGroups={placeAncestryGroups} />
+            <PlaceInput
+              initialGroups={placeAncestryGroups}
+              key={this.props.placeAncestryGroups}
+            />
           </Route>
           <Route path={`${this.props.match.path}/:placeId`}>
             <Place places={places} />

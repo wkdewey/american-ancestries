@@ -22,7 +22,6 @@ const PlaceInput = (props) => {
     setPopulation(parseInt(event.target.value));
 
   const handleGroupChange = (groups, id, event) => {
-    debugger;
     let group = { ...groups.find((group) => group.ancestryGroupId === id) };
     group.population = parseInt(event.target.value);
     const idx = groups.findIndex((group) => group.ancestryGroupId === id);
