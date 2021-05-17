@@ -25,23 +25,23 @@ class App extends Component {
                 return <AncestryGroupsContainer {...routerProps} />;
               }}
             /> */}
-            <Route exact path={`${this.props.match.path}/:ancestryGroupId`}>
+            <Route exact path="/ancestryGroups/:ancestryGroupId">
               <AncestryGroup ancestryGroups={ancestryGroups} />
             </Route>
-            <Route path={this.props.match.path}>
+            <Route path="/ancestryGroups">
               <AncestryGroups ancestryGroups={ancestryGroups} />
             </Route>
-            <Route path={`${this.props.match.path}/new`}>
+            <Route path="/places/new">
               <PlaceInput
                 initialGroups={placeAncestryGroups}
-                key={this.props.placeAncestryGroups}
+                // key={this.props.placeAncestryGroups}
               />
             </Route>
-            <Route path={`${this.props.match.path}/:placeId`}>
+            <Route path="/places/:placeId">
               <Place places={places} />
               <PlaceComparison places={places} />
             </Route>
-            <Route path={this.props.match.path}>
+            <Route path="/places">
               <Places places={places} />
             </Route>
             <Route path="">
