@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchPlaces } from "./actions/placeActions";
 import { fetchAncestryGroups } from "./actions/ancestryGroupActions";
 import "./App.css";
 import NavBar from "./components/NavBar";
-// import PlacesContainer from "./containers/PlacesContainer";
-// import AncestryGroupsContainer from "./containers/AncestryGroupsContainer";
 import AncestryGroups from "./components/ancestry_groups/AncestryGroups";
 import AncestryGroup from "./components/ancestry_groups/AncestryGroup";
 import Place from "./components/places/Place";
@@ -29,18 +27,6 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Switch>
-            {/* <Route
-              path="/places"
-              render={(routerProps) => {
-                return <PlacesContainer {...routerProps} />;
-              }}
-            />
-            <Route
-              path="/ancestry_groups"
-              render={(routerProps) => {
-                return <AncestryGroupsContainer {...routerProps} />;
-              }}
-            /> */}
             <Route path="/ancestry_groups/:ancestryGroupId">
               <AncestryGroup ancestryGroups={ancestryGroups} />
             </Route>
@@ -50,7 +36,7 @@ class App extends Component {
             <Route path="/places/new">
               <PlaceInput
                 initialGroups={placeAncestryGroups}
-                // key={this.props.placeAncestryGroups}
+                key={this.props.placeAncestryGroups}
               />
             </Route>
             <Route path="/places/:placeId">
