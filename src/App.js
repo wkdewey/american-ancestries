@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Switch>
-            <Route
+            {/* <Route
               path="/places"
               render={(routerProps) => {
                 return <PlacesContainer {...routerProps} />;
@@ -24,7 +24,26 @@ class App extends Component {
               render={(routerProps) => {
                 return <AncestryGroupsContainer {...routerProps} />;
               }}
-            />
+            /> */}
+            <Route exact path={`${this.props.match.path}/:ancestryGroupId`}>
+              <AncestryGroup ancestryGroups={ancestryGroups} />
+            </Route>
+            <Route path={this.props.match.path}>
+              <AncestryGroups ancestryGroups={ancestryGroups} />
+            </Route>
+            <Route path={`${this.props.match.path}/new`}>
+              <PlaceInput
+                initialGroups={placeAncestryGroups}
+                key={this.props.placeAncestryGroups}
+              />
+            </Route>
+            <Route path={`${this.props.match.path}/:placeId`}>
+              <Place places={places} />
+              <PlaceComparison places={places} />
+            </Route>
+            <Route path={this.props.match.path}>
+              <Places places={places} />
+            </Route>
             <Route path="">
               <Home />
             </Route>
