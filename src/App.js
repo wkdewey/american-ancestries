@@ -41,10 +41,10 @@ class App extends Component {
                 return <AncestryGroupsContainer {...routerProps} />;
               }}
             /> */}
-            <Route exact path="/ancestryGroups/:ancestryGroupId">
+            <Route path="/ancestry_groups/:ancestryGroupId">
               <AncestryGroup ancestryGroups={ancestryGroups} />
             </Route>
-            <Route path="/ancestryGroups">
+            <Route path="/ancestry_groups">
               <AncestryGroups ancestryGroups={ancestryGroups} />
             </Route>
             <Route path="/places/new">
