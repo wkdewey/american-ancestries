@@ -12,26 +12,19 @@ import {
 } from "reactstrap";
 import Like from "../Like";
 
-const Places = () => {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     placeLikes: [],
-  //   };
-  // }
+const Places = ({ places }) => {
+  const [placeLikes, setPlaceLikes] = useState([]);
 
-  const [placeLikes, setPlaceLikes] = useState([];)
-
-  handleLike = (id, event) => {
+  const handleLike = (id, event) => {
     const newLikes = [...placeLikes];
     newLikes[id] = newLikes[id] ? !newLikes[id] : true;
     setPlaceLikes(newLikes);
   };
 
-  if (this.props.places.length > 0) {
+  if (places.length > 0) {
     return (
       <CardColumns>
-        {this.props.places.map((place) => {
+        {places.map((place) => {
           return (
             <div className="place" key={place.id}>
               <Card>
@@ -50,7 +43,7 @@ const Places = () => {
                   </CardText>
                   <Button
                     onClick={(event) => {
-                      this.handleLike(place.id, event);
+                      handleLike(place.id, event);
                     }}
                   >
                     Like
@@ -66,5 +59,5 @@ const Places = () => {
   } else {
     return <Loading />;
   }
-}
+};
 export default Places;
