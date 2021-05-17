@@ -13,19 +13,19 @@ import {
 import Like from "../Like";
 
 const Places = () => {
-  constructor(props) {
-    super(props);
-    this.state = {
-      placeLikes: [],
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     placeLikes: [],
+  //   };
+  // }
+
+  const [placeLikes, setPlaceLikes] = useState([];)
 
   handleLike = (id, event) => {
-    const newLikes = [...this.state.placeLikes];
+    const newLikes = [...placeLikes];
     newLikes[id] = newLikes[id] ? !newLikes[id] : true;
-    this.setState({
-      placeLikes: newLikes,
-    });
+    setPlaceLikes(newLikes);
   };
 
   if (this.props.places.length > 0) {
@@ -55,7 +55,7 @@ const Places = () => {
                   >
                     Like
                   </Button>
-                  <Like liked={this.state.placeLikes[place.id] || false} />
+                  <Like liked={placeLikes[place.id] || false} />
                 </CardBody>
               </Card>
             </div>
