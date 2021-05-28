@@ -10,6 +10,8 @@ const PlaceInput = ({ initialGroups = null }) => {
   const [population, setPopulation] = useState(0);
   const [placeAncestryGroups, setPlaceAncestryGroups] = useState(initialGroups);
 
+  if (initialGroups !== placeAncestryGroups)
+    setPlaceAncestryGroups(initialGroups);
   const handleNameChange = (event) => setName(event.target.value);
 
   const handlePopulationChange = (event) =>
