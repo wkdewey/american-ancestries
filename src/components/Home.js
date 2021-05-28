@@ -12,7 +12,7 @@ const Home = () => {
           View different places and see how different ethnic origins are
           represented there, or view ancestry groups and where they are most
           strongly represented. If you have Census data you can also input new
-          places with ancestry information.
+          places with ancestry information. TEST CONTENT
         </p>
       </Jumbotron>
     </div>
