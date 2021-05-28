@@ -8,13 +8,7 @@ import Loading from "../Loading";
 const PlaceInput = ({ initialGroups = null }) => {
   const [name, setName] = useState("");
   const [population, setPopulation] = useState(0);
-  const [placeAncestryGroups, setPlaceAncestryGroups] = useState(() => {
-    if (initialGroups) {
-      return initialGroups;
-    } else {
-      return null;
-    }
-  });
+  const [placeAncestryGroups, setPlaceAncestryGroups] = useState(initialGroups);
 
   const handleNameChange = (event) => setName(event.target.value);
 
